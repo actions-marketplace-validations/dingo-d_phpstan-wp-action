@@ -1,9 +1,9 @@
-<img src="http://159.65.210.101/php-actions.png" align="right" alt="PHP Static Analysis in Github Actions" />
-
- PHP Static Analysis in Github Actions. 
+ PHP Static Analysis in Github Actions for WordPress. 
  ======================================
 
-PHPStan finds bugs in your code without writing tests by using runnin static analysis on your project's code.
+PHPStan finds bugs in your code without writing tests by using running static analysis on your project's code. This fork of the official phpstan action uses the [WordPress extension for PHPStan](https://github.com/szepeviktor/phpstan-wp-action) by Viktor Szépe. 
+
+This package was forked from the original [phpstan action](https://github.com/php-actions/phpstan).
 
 Usage
 -----
@@ -22,14 +22,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: php-actions/composer@v2 # or alternative dependency management
-    - uses: php-actions/phpstan@v1
+    - uses: dingo-d/phpstan-wp-action@v1
     # ... then your own project steps ...
 ```
 
 Commands
 --------
 
-By default, adding - uses: php-actions/phpstan@v1 into your workflow will run `phpstan analyse`, as `analyse` is the default command name.
+By default, adding - uses: dingo-d/phpstan-wp-action@v1 into your workflow will run `phpstan analyse`, as `analyse` is the default command name.
 
 You can issue custom commands by passing a command input, like so:
 
@@ -40,7 +40,7 @@ jobs:
     ...
 
     - name: PHPStan
-      uses: php-actions/phpstan@v1
+      uses: dingo-d/phpstan-wp-action@v1
       with:
         command: your-command-here
 ```
@@ -69,14 +69,8 @@ jobs:
     ...
 
     - name: PHPStan Static Analysis
-      uses: php-actions/phpstan@v1
+      uses: dingo-d/phpstan-wp-action@v1
       with:
         configuration: custom/path/to/phpstan.neon
         memory_limit: 256M
 ```
-
-If you require other configurations of phpstan, please request them in the [Github issue tracker](https://github.com/php-actions/phpstan/issues)
-
-If you found this repository helpful, please consider [sponsoring the developer][sponsor].
-
-[sponsor]: https://github.com/sponsors/g105b

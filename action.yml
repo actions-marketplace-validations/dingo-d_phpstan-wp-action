@@ -1,5 +1,5 @@
-name: PHPStan (php-actions)
-description: PHP Static Analysis in Github Actions.
+name: PHPStan for WordPress
+description: PHP Static Analysis in Github Actions for WordPress.
 
 inputs:
   command:

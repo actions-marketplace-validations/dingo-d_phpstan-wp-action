@@ -1,7 +1,7 @@
  PHP Static Analysis in Github Actions for WordPress. 
  ======================================
 
-PHPStan finds bugs in your code without writing tests by using running static analysis on your project's code. This fork of the official phpstan action uses the [WordPress extension for PHPStan](https://github.com/szepeviktor/phpstan-wp-action) by Viktor Szépe. 
+PHPStan finds bugs in your code without writing tests by using running static analysis on your project's code. This fork of the official phpstan action uses the [WordPress extension for PHPStan](https://github.com/szepeviktor/phpstan-wordpress) by Viktor Szépe. 
 
 This package was forked from the original [phpstan action](https://github.com/php-actions/phpstan).
 
